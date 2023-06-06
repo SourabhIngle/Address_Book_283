@@ -24,7 +24,7 @@ public class Contact  {
                 ", email='" + email + '\'' +
                 ", zip=" + zip +
                 ", phoneNumber=" + phoneNumber +
-                '}';
+                '}'+"\n";
     }
 
     public void setLastName(String lastName) {
@@ -85,10 +85,7 @@ public class Contact  {
     private String city;
     private String state;
     private String email;
-    private int zip;
-    private long phoneNumber;
+    private Integer zip;
+    private Long phoneNumber;
 
-    public static void main(String[] args) {
-
-    }
 }
