@@ -12,7 +12,8 @@ public class AddressBookMain extends AddressBook {
             System.out.println("Select any option \n" +
                     "1 For Add person data \n" +
                     "2 For Display Data \n" +
-                    "3 For Exit \n");
+                    "3 For Edit person data \n" +
+                    "4 For Exit \n");
             int number = sc.nextInt();
             switch (number) {
                 case 1:
@@ -22,6 +23,9 @@ public class AddressBookMain extends AddressBook {
                     displayPersonDetails();
                     break;
                 case 3:
+                    editExistingContact();
+                    break;
+                case 4:
                     exit = false;
                     System.out.println("You are successfully exit");
                     break;
