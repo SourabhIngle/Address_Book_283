@@ -57,7 +57,9 @@ public class AddressBook {
             contact = people.get(i);
 
             if (fName.equalsIgnoreCase(contact.getFirstName()) && lName.equalsIgnoreCase(contact.getLastName())) {
-                contact = people.get(i);
+                System.out.println("You are edit this person data :\n" +
+                        "First Name : " + contact.getFirstName() + "\n" +
+                        "Last Name :" + contact.getLastName());
 
                 System.out.println("Address");
                 contact.setAddress(sc.nextLine());
@@ -78,5 +80,26 @@ public class AddressBook {
                 contact.setPhoneNumber(sc.nextLong());
             }
         }
+    }
+
+    public void deleteContact() {
+        System.out.println("Which contact do you want to delete: ");
+        System.out.println("Enter first name : ");
+        String fName = sc.nextLine();
+        System.out.println("Enter last name : ");
+        String lName = sc.nextLine();
+
+        int count = 0;
+        for (int i = 0; i < people.size(); i++) {
+
+            contact = people.get(i);
+            if (fName.equalsIgnoreCase(contact.getFirstName()) && lName.equalsIgnoreCase(contact.getLastName())) {
+                contact = people.remove(i);
+                count++;
+                System.out.println("person removed successfully");
+            }
+        }
+        if (count == 0)
+            System.out.println("Match not found \n");
     }
 }
