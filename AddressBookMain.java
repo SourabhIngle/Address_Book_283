@@ -18,7 +18,11 @@ public class AddressBookMain extends AddressBook {
             int number = sc.nextInt();
             switch (number) {
                 case 1:
-                    addContactDetails();
+                    System.out.println("Enter how many person do you want to add: ");
+                    int num = sc.nextInt();
+                    for (int i = 0; i < num; i++) {
+                        addContactDetails();
+                    }
                     break;
                 case 2:
                     displayPersonDetails();

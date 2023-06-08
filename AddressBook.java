@@ -61,23 +61,51 @@ public class AddressBook {
                         "First Name : " + contact.getFirstName() + "\n" +
                         "Last Name :" + contact.getLastName());
 
-                System.out.println("Address");
-                contact.setAddress(sc.nextLine());
-
-                System.out.println("City");
-                contact.setCity(sc.nextLine());
-
-                System.out.println("State");
-                contact.setState(sc.nextLine());
-
-                System.out.println("Email Id");
-                contact.setEmail(sc.nextLine());
-
-                System.out.println("Zip code");
-                contact.setZip(sc.nextInt());
-
-                System.out.println("Phone Number");
-                contact.setPhoneNumber(sc.nextLong());
+                boolean exit = true;
+                while (exit) {
+                    System.out.println("What do you want to edit select option :\n"
+                            + "1.Address,   " + "2.City,   " + "3.State,   " + "4.Email Id,   "
+                            + "5.Zip Code,   " + "6.Phone Number,   " + "7.exit");
+                    int choice = sc.nextInt();sc.nextLine();
+                    switch (choice) {
+                        case 1:
+                            System.out.println("Address");
+                            contact.setAddress(sc.nextLine());
+                            System.out.println("Address update successfully");
+                            break;
+                        case 2:
+                            System.out.println("City");
+                            contact.setCity(sc.nextLine());
+                            System.out.println("City update successfully");
+                            break;
+                        case 3:
+                            System.out.println("State");
+                            contact.setState(sc.nextLine());
+                            System.out.println("State update successfully");
+                            break;
+                        case 4:
+                            System.out.println("Email Id");
+                            contact.setEmail(sc.nextLine());
+                            System.out.println("Email Id update successfully");
+                            break;
+                        case 5:
+                            System.out.println("Zip code");
+                            contact.setZip(sc.nextInt());
+                            System.out.println("Zip code update successfully");
+                            break;
+                        case 6:
+                            System.out.println("Phone Number");
+                            contact.setPhoneNumber(sc.nextLong());
+                            System.out.println("Phone Number update successfully");
+                            break;
+                        case 7:
+                            exit = false;
+                            System.out.println("Exit successfully");
+                            break;
+                        default :
+                            System.out.println("Wrong entry!");
+                    }
+                }
             }
         }
     }
